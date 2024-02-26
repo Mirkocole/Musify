@@ -1,0 +1,19 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body,html{
+    height: 100%;
+}
+
+#sideNav{
+    height: 100%;
+    overflow-y: hidden;
+}
+
+#commentsNav{
+    overflow-y: scroll;
+    max-height: 430px;
+}
