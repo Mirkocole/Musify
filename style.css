@@ -33,3 +33,11 @@
 .border-circle{
     border-radius: 50px;
 }
+
+.text-grey{
+    color: rgb(155, 157, 158)!important;
+}
+
+.bg-grey{
+    background-color: rgb(184, 184, 184)!important;
+}
