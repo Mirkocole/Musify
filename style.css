@@ -1,95 +1,55 @@
-*{
-    padding:0;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-/* body,html{
-    height: 100%;
-} */
 
-#sideNav{
-    /* height: 100%; */
+
+#sideNav {
     overflow-y: hidden;
 }
 
-#commentsNav{
+#commentsNav {
     overflow-y: scroll;
     max-height: 430px;
 }
 
-.no-arrow-dropdown.dropdown-toggle::after{
-    content:none!important;
+.no-arrow-dropdown.dropdown-toggle::after {
+    content: none !important;
 }
 
-.w-300{
-    width: 300px!important;
+.w-300 {
+    max-width: 300px !important;
 }
 
-.w-60{
-    width: 60px!important;
+.w-60 {
+    width: 60px !important;
 }
 
-.border-circle{
+.border-circle {
     border-radius: 50px;
+    overflow: hidden;
 }
 
-.text-grey{
-    color: rgb(155, 157, 158)!important;
+.border-circle>img {
+    object-fit: fill;
 }
 
-.bg-grey{
-    background-color: rgb(184, 184, 184)!important;
+.text-grey {
+    color: rgb(155, 157, 158) !important;
 }
 
-
-/* MUSIC PLAYER */
-@font-face { font-family: Myriad; src: url('http://freeshared.org/fonts/Myriad.OTF'); }
-body
-{
-    font-family: Myriad; 
-}
-.aligned { 
-	text-align: center; 
-	padding-bottom:28%; 
-}
-.aligned_input { 
-	text-align: center; 
-	padding-bottom:-10%; 
-}
-.aligned_text { 
-	text-align: center; 
-	font-size: 88%;
-}
-.no:hover {
-	background:none;
-} .no:active {
-	background: none;
-}
-#seconds {
-	font-size:10px;
-}
-.btn-custom {
-	background-color: black;
-	color:white;
-	transition-property: background, opacity;
-	transition-duration: 0.5s;
-} .btn-custom:hover, .btn-custom:active, .btn-custom:focus {
-	cursor: pointer;
-	opacity:0.5;
-	color:white;
-	background-color:white;
-} 
-/*****************************************************************************************************************************/
-
-/* OFFCANVAS */
-.bg-black {
-    background-color: black;
+.bg-grey {
+    background-color: rgb(184, 184, 184) !important;
 }
 
-.friend-text {
-	font-size: small;
+.gradient-black {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(27deg, rgba(0, 0, 0, 1) 0%, rgba(47, 47, 47, 1) 81%);
 }
-.friend-subtext {
-	font-size: smaller;
+
+.bg-gradient-black {
+    background: rgb(18, 18, 18);
+    background: linear-gradient(27deg, rgba(18, 18, 18, 1) 0%, rgba(33, 33, 33, 1) 81%);
 }

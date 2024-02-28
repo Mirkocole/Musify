@@ -1,3 +1,10 @@
+// API DEEZER
+const apiURL = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=';
+
+// Default Artists
+const defaultArtist = ['queen','eminem','michael jackson'];
+
+// Live Comments
 const messages = [
     "early stage emely syndrome (sett-ott 2022)",
     "Be The Young",
@@ -23,6 +30,7 @@ const messages = [
 const commentsNav = document.getElementById('commentsNav');
 
 
+
 window.onload = ()=>{
 
     // let rand = Math.floor(Math.random() * messages.length);
@@ -33,76 +41,34 @@ window.onload = ()=>{
     //     commentsNav.appendChild(mex);
     // })
 
-    setInterval(()=>{
-        let rand = Math.floor(Math.random() * messages.length);
-        console.log(messages[rand]);
-        let mex = document.createElement('p');
-        mex.classList = ['text-light py-2'];
-        mex.innerText=messages[rand];
-        if (commentsNav.hasChildNodes) {
-            commentsNav.insertBefore(mex,commentsNav.firstChild)
-        } else {
-            commentsNav.append(mex);
+    // setInterval(()=>{
+    //     let rand = Math.floor(Math.random() * messages.length);
+    //     console.log(messages[rand]);
+    //     let mex = document.createElement('p');
+    //     mex.classList = ['text-light py-2'];
+    //     mex.innerText=messages[rand];
+    //     if (commentsNav.hasChildNodes) {
+    //         commentsNav.insertBefore(mex,commentsNav.firstChild)
+    //     } else {
+    //         commentsNav.append(mex);
             
-        }
+    //     }
 
-    },1000)
+    // },1000);
+
+    getMusic()
 
 }
 
 
-/* MUSIC PLAYER */
-var status = 0;
-function Play(music,id) {
-    var audio = $("#"+id); 
-	if(status == 0 || status == 2)
-	{     
-		if(status == 0) audio.attr("src", music);
-		audio[0].play();
-		$("#play").attr("class","glyphicon glyphicon-pause aligned")
-		status = 1;
-	} else if(status == 1) {    
-		audio[0].pause();
-		$("#play").attr("class","glyphicon glyphicon-play aligned")
-		status = 2;
-	}
+async function getMusic(){
+
+    try {
+        let res = await fetch(apiURL+'queen');
+        let json = await res.json();
+        console.log(json);
+
+    } catch (error) {
+        console.log(error)
+    }
 }
-function Stop(music,id) {
-	var audio = $("#"+id);
-	audio.attr("src", '');
-	$("#play").attr("class","glyphicon glyphicon-play aligned")
-	status = 0;
-}
-function Restart(music,id) {
-	var audio = $("#"+id);
-	audio.prop("currentTime",0)
-}
-function VolumeUp(music,id) {
-	var audio = $("#"+id);
-	var volume = $("#"+id).prop("volume")+0.1;
-	if(volume > 1) volume = 1;
-    $("#"+id).prop("volume",volume);
-}
-function VolumeDown(music,id) {
-	var audio = $("#"+id);
-	var volume = $("#"+id).prop("volume")-0.1;
-	if(volume < 0) volume = 0;
-    $("#"+id).prop("volume",volume);
-}
-function Forward5(music,id) {
-	var audio = $("#"+id);
-	audio.prop("currentTime",audio.prop("currentTime")+5);
-}
-function Backward5(music,id) {
-	var audio = $("#"+id);
-	audio.prop("currentTime",audio.prop("currentTime")-5);
-}
-function Forward1(music,id) {
-	var audio = $("#"+id);
-	audio.prop("currentTime",audio.prop("currentTime")+1);
-}
-function Backward1(music,id) {
-	var audio = $("#"+id);
-	audio.prop("currentTime",audio.prop("currentTime")-1);
-}
-/************************************************************************ */
