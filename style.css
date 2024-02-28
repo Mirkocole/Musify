@@ -4,12 +4,9 @@
     box-sizing: border-box;
 }
 
-/* body,html{
-    height: 100%;
-} */
+
 
 #sideNav{
-    /* height: 100%; */
     overflow-y: hidden;
 }
 
@@ -32,6 +29,11 @@
 
 .border-circle{
     border-radius: 50px;
+    overflow: hidden;
+}
+
+.border-circle > img{
+    object-fit: fill;
 }
 
 .text-grey{
