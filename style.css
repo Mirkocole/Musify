@@ -1,0 +1,95 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+/* body,html{
+    height: 100%;
+} */
+
+#sideNav{
+    /* height: 100%; */
+    overflow-y: hidden;
+}
+
+#commentsNav{
+    overflow-y: scroll;
+    max-height: 430px;
+}
+
+.no-arrow-dropdown.dropdown-toggle::after{
+    content:none!important;
+}
+
+.w-300{
+    width: 300px!important;
+}
+
+.w-60{
+    width: 60px!important;
+}
+
+.border-circle{
+    border-radius: 50px;
+}
+
+.text-grey{
+    color: rgb(155, 157, 158)!important;
+}
+
+.bg-grey{
+    background-color: rgb(184, 184, 184)!important;
+}
+
+
+/* MUSIC PLAYER */
+@font-face { font-family: Myriad; src: url('http://freeshared.org/fonts/Myriad.OTF'); }
+body
+{
+    font-family: Myriad; 
+}
+.aligned { 
+	text-align: center; 
+	padding-bottom:28%; 
+}
+.aligned_input { 
+	text-align: center; 
+	padding-bottom:-10%; 
+}
+.aligned_text { 
+	text-align: center; 
+	font-size: 88%;
+}
+.no:hover {
+	background:none;
+} .no:active {
+	background: none;
+}
+#seconds {
+	font-size:10px;
+}
+.btn-custom {
+	background-color: black;
+	color:white;
+	transition-property: background, opacity;
+	transition-duration: 0.5s;
+} .btn-custom:hover, .btn-custom:active, .btn-custom:focus {
+	cursor: pointer;
+	opacity:0.5;
+	color:white;
+	background-color:white;
+} 
+/*****************************************************************************************************************************/
+
+/* OFFCANVAS */
+.bg-black {
+    background-color: black;
+}
+
+.friend-text {
+	font-size: small;
+}
+.friend-subtext {
+	font-size: smaller;
+}

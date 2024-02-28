@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b68de36aab.js" crossorigin="anonymous"></script>
+    <title>Musify</title>
+
+</head>
+
+<body>
+
+    <div class="container-fluid d-flex p-0" style="height: 100%;">
+
+        <!-- Navbar Desktop -->
+        <div class="col-3 border d-none d-lg-flex" id="sideNav">
+            <nav class="navbar navbar-expand-lg bg-dark d-flex flex-column w-100" data-bs-theme="dark">
+                <div class="container-fluid d-flex flex-column align-items-start">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            ...
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-column w-100">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Cerca</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">La tua libreria</a>
+                            </li>
+
+                            <hr class="dropdown-divider text-light py-3">
+                            </hr>
+
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#"><i class="fa-solid  fa-square-plus ps-1 fs-4"></i> Crea playlist</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-solid fa-heart p-1 bg-grey text-dark rounded"></i> Brani che ti piacciono</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-solid fa-bookmark px-2 py-1 bg-grey text-dark rounded"></i> I tuoi episodi</a>
+                            </li>
+                            <hr class="hr text-light d-flex w-100" />
+                        </ul>
+
+
+
+
+                    </div>
+
+                    <div class="container border p-3" id="commentsNav">
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+        <!-- Main Content -->
+        <div class="col border bg-dark p-5">
+
+
+            <div class="container d-flex justify-content-between align-items-center mb-3">
+                <div class="col-auto">
+                    <i class="btn fa-solid fa-arrow-left p-2 text-light bg-secondary rounded-circle me-3 bg-black"></i>
+                    <i class="btn fa-solid fa-arrow-right p-2 text-light bg-secondary rounded-circle bg-black"></i>
+                </div>
+                <div class="col-auto">
+                    <button type="button"
+                        class="btn btn-secondary d-flex align-items-center dropdown-toggle w-100 pe-2 ps-0 py-0 bg-black border border-none border-circle"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=30&h=50&dpr=2"
+                                alt="" class="rounded-circle">
+                            <span class="p-2">Lidia Nautilus ...</span>
+                        </div>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDark" aria-controls="offcanvasDark">
+                           Action
+                          </button></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- Blocco Album Singolo -->
+            <div class="container row align-items-center justify-content-between bg-black rounded p-3 my-4">
+                <div class="d-flex align-items-center">
+                    <img src="https://kisskiss.it/wp-content/uploads/2022/10/fedez_salmo_viola_cover-jpg-scaled.jpg"
+                        alt="" class="w-300 me-3">
+                    <div class="d-flex flex-column text-light justify-content-between">
+                        <h2 class="fs-1">VIOLA (feat. Salmo)</h2>
+                        <span>Fedez, Salmo</span>
+                        <p>Ascolta il nuovo siingolo di Fedez e Salmo!</p>
+                        <div class="row d-flex ">
+                            <button
+                                class="btn btn-success d-flex w-auto mx-2 px-4 text-dark border-circle">Play</button>
+                            <button class="btn btn-outline-light w-auto px-4 border-circle">Salva</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="text-light">Buonasera</h4>
+
+
+            <div class="row row-cols-2 row-cols-lg-3 g-4 my-3 p-0">
+                <div class="col-12">
+                    <div class="container border p-3 bg-secondary d-flex justify-content-start align-items-center">
+                        <img src="https://kisskiss.it/wp-content/uploads/2022/10/fedez_salmo_viola_cover-jpg-scaled.jpg"
+                            alt="" class="w-60 me-3">
+                        <span class="text-light"> Testo di prova</span>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="container border p-3 bg-secondary d-flex justify-content-start align-items-center">
+                        <img src="https://kisskiss.it/wp-content/uploads/2022/10/fedez_salmo_viola_cover-jpg-scaled.jpg"
+                            alt="" class="w-60 me-3">
+                        <span class="text-light"> Testo di prova</span>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="container border p-3 bg-secondary d-flex justify-content-start align-items-center">
+                        <img src="https://kisskiss.it/wp-content/uploads/2022/10/fedez_salmo_viola_cover-jpg-scaled.jpg"
+                            alt="" class="w-60 me-3">
+                        <span class="text-light"> Testo di prova</span>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="container border p-3 bg-secondary d-flex justify-content-start align-items-center">
+                        <img src="https://kisskiss.it/wp-content/uploads/2022/10/fedez_salmo_viola_cover-jpg-scaled.jpg"
+                            alt="" class="w-60 me-3">
+                        <span class="text-light"> Testo di prova</span>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="container border p-3 bg-secondary d-flex justify-content-start align-items-center">
+                        <img src="https://kisskiss.it/wp-content/uploads/2022/10/fedez_salmo_viola_cover-jpg-scaled.jpg"
+                            alt="" class="w-60 me-3">
+                        <span class="text-light"> Testo di prova</span>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="container border p-3 bg-secondary d-flex justify-content-start align-items-center">
+                        <img src="https://kisskiss.it/wp-content/uploads/2022/10/fedez_salmo_viola_cover-jpg-scaled.jpg"
+                            alt="" class="w-60 me-3">
+                        <span class="text-light"> Testo di prova</span>
+                    </div>
+                </div>
+            </div>
+            <h4 class="text-light">Altro di ciò che ti piace</h4>
+
+
+            <!-- Cards Album -->
+            <div class="row row-cols-2 row-cols-lg-5 g-4 my-3 p-0">
+                <div class="col-12">
+                    <div class="container p-0 d-flex justify-content-start align-items-center">
+                        <div class="card text-bg-dark mb-3" style="width: 18rem;">
+                            <img src="https://kisskiss.it/wp-content/uploads/2022/10/fedez_salmo_viola_cover-jpg-scaled.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="container p-0 d-flex justify-content-start align-items-center">
+                        <div class="card text-bg-dark mb-3" style="width: 18rem;">
+                            <img src="https://kisskiss.it/wp-content/uploads/2022/10/fedez_salmo_viola_cover-jpg-scaled.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="container p-0 d-flex justify-content-start align-items-center">
+                        <div class="card text-bg-dark mb-3" style="width: 18rem;">
+                            <img src="https://kisskiss.it/wp-content/uploads/2022/10/fedez_salmo_viola_cover-jpg-scaled.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="container p-0 d-flex justify-content-start align-items-center">
+                        <div class="card text-bg-dark mb-3" style="width: 18rem;">
+                            <img src="https://kisskiss.it/wp-content/uploads/2022/10/fedez_salmo_viola_cover-jpg-scaled.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="container p-0 d-flex justify-content-start align-items-center">
+                        <div class="card text-bg-dark mb-3" style="width: 18rem;">
+                            <img src="https://kisskiss.it/wp-content/uploads/2022/10/fedez_salmo_viola_cover-jpg-scaled.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>             
+              <div class="offcanvas offcanvas-end bg-black text-light" tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
+
+                <div class="offcanvas-header d-flex justify-content-end">
+
+                    <i class="far fa-window-restore mx-3" style="color: #63E6BE;"></i>
+                    <i class="far fa-window-minimize mx-3" style="color: #d25b5b;"></i>
+                    <i class="fas fa-times mx-3" style="color: #ff0088;"></i>
+                </div>
+                <div class="offcanvas-body  bg-black">
+                  <p>Attività amici <i class="fas fa-times  float-end mx-3" style="color: #ff0088;"></i> <i class="fas fa-user-friends float-end" style="color: #7e7777;"></i></p>
+                  <span><i class="fas fa-user p-3 friend-text" style="color: #B197FC;"></i>Charlie Hookam <br /> <h6 class="mx-5 friend-subtext">In Camera - Yumi Zooma</h6></span>
+
+                  <span><i class="fas fa-user p-3 friend-text" style="color: #878a88;"></i>Lightdark02 <br /> <h6 class="mx-5 friend-subtext">Aimed to Kill</h6></span>
+
+                  <span><i class="fas fa-user p-3 friend-text" style="color: #97fcb5;"></i>Charlie Hookam <br /> <h6 class="mx-5 friend-subtext">New Kings</h6></span>
+                </div>
+                    </div class="text-light">  <!-- friend list-->
+                     
+                    </div>
+            </div>
+            </div>
+            <!-- Music Player Phone -->
+            <div class="holder sticky-bottom bg-dark d-block d-md-none text-end">  
+                <span class="text-light">A NATURAL MOCKUP OF A SONG TITLE</span>           
+                <i class="fas fa-music mx-3" style="color: #74C0FC;"></i>
+                <i class="far fa-heart mx-3" style="color: #cd3232;"></i>
+                <button onclick="Play('music.mp3','audio');" class="btn bg-dark mx-3"><span title="Play" id="play" class="glyphicon glyphicon-play aligned"><i class="far fa-play-circle" style="color: #74C0FC;"></i></span></button>
+            </div>
+            <!-- Music Player PC\Tablet -->
+            <div class="holder sticky-bottom bg-dark d-none d-md-block d-md-block">
+                <div class="audio green-audio-player">
+                  <div class="loading">
+                    <div class="spinner"></div>
+                  </div>
+
+                  <div class="play-pause-btn text-center">
+                    <button onclick="Play('music.mp3','audio');" class="btn bg-dark"><span title="Play" id="play" class="glyphicon glyphicon-play aligned"><i class="fas fa-random" style="color: #74C0FC;"></i></span></button>
+                    <button onclick="Play('music.mp3','audio');" class="btn bg-dark"><span title="Play" id="play" class="glyphicon glyphicon-play aligned"><i class="fas fa-arrow-left" style="color: #B197FC;"></i></span></button>
+                    <button onclick="Play('music.mp3','audio');" class="btn bg-dark"><span title="Play" id="play" class="glyphicon glyphicon-play aligned"><i class="far fa-play-circle" style="color: #74C0FC;"></i></span></button>
+                    <button onclick="Play('music.mp3','audio');" class="btn bg-dark"><span title="Play" id="play" class="glyphicon glyphicon-play aligned"><i class="fas fa-arrow-right" style="color: #B197FC;"></i></span></button>
+                    <button onclick="Play('music.mp3','audio');" class="btn bg-dark"><span title="Play" id="play" class="glyphicon glyphicon-play aligned"><i class="fas fa-undo-alt"></i></span></button>
+                    <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play" class="glyphicon glyphicon-play aligned"><i class="fa-solid fa-up-right-and-down-left-from-center" style="color: #ffc800;"></i></span></button>                   
+                    <input type="range" min="1" max="100" value="50" class="slider float-end p-2" id="myRange">
+                    <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play" class="glyphicon glyphicon-play aligned"><i class="fas fa-volume-up" style="color: #d53939;"></i></span></button>
+                    <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play" class="glyphicon glyphicon-play aligned"><i class="fas fa-microphone" style="color: #00ff04;"></i></span></button>
+                    <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play" class="glyphicon glyphicon-play aligned"><i class="fas fa-hamburger" style="color: #63E6BE;"></i></span></button>
+                    <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play" class="glyphicon glyphicon-play aligned"><i class="fas fa-hamburger" style="color: #63E6BE;"></i></span></button>
+                    <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play" class="glyphicon glyphicon-play aligned"><i class="fas fa-hamburger" style="color: #63E6BE;"></i></span></button>
+
+                    
+                    <img class="float-start" src="https://www.cucchiaio.it/content/cucchiaio/it/ricette/2016/03/pancake-con-il-bimby/jcr:content/header-par/image-single.img10.jpg/1458645080164.jpg" height="50px"/>
+                    <span class="text-light float-start p-2">Pan Kakes <br />Sugar and butter</span>
+                    <!--
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
+                      <path fill="#566574" fill-rule="evenodd" d="M18 12L0 24V0" class="play-pause-icon" id="playPause"/>
+                    </svg>
+                    --> 
+
+                  <div class="controls text-light ">
+                    <span class="current-time">1:00</span>
+                    <div class="slider bg-dark" data-direction="horizontal">
+                      <div class="progress">
+                        <div class="pin" id="progress-pin" data-method="rewind"></div>
+                      </div>
+                    </div>
+                    <span class="total-time"> 0:00 </span>
+                  </div>
+                </div>
+            </div>
+
+           
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
