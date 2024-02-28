@@ -60,7 +60,7 @@ function creaTabRow({title, artist, duration, rank, index}, tracknumber) {
     let tabRow = document.createElement("tr");
 
     let tabNum = document.createElement("th");
-    tabNum.classList.add("bg-transparent", "clr-darkgrey", "align-middle");
+    tabNum.classList.add("bg-transparent", "clr-darkgrey", "align-middle", "d-none", "d-sm-table-cell");
     tabNum.setAttribute("scope", "row");
     tabNum.innerText = tracknumber;
 
@@ -76,19 +76,26 @@ function creaTabRow({title, artist, duration, rank, index}, tracknumber) {
     songArtist.innerText = artist.name;
 
     let songRank = document.createElement("td");
-    songRank.classList.add("bg-transparent", "clr-darkgrey", "align-middle");
+    songRank.classList.add("bg-transparent", "clr-darkgrey", "align-middle", "d-none", "d-sm-table-cell");
     songRank.innerText = rank;
 
     let songTime = document.createElement("td");
-    songTime.classList.add("bg-transparent", "clr-darkgrey", "align-middle");
+    songTime.classList.add("bg-transparent", "clr-darkgrey", "align-middle", "d-none", "d-sm-table-cell");
     songTime.innerText = formatTime2(duration);
+
+    let songOpts = document.createElement("td");
+    songOpts.classList.add("bg-transparent", "clr-darkgrey", "align-middle", "d-table-cell", "d-sm-none");
+    let songOptsBtn = document.createElement("ion-icon");
+    songOptsBtn.setAttribute("name", "ellipsis-vertical-outline");
 
     songWrapper.appendChild(songTitle);
     songWrapper.appendChild(songArtist);
+    songOpts.appendChild(songOptsBtn);
     tabRow.appendChild(tabNum);
     tabRow.appendChild(songWrapper);
     tabRow.appendChild(songRank);
     tabRow.appendChild(songTime);
+    tabRow.appendChild(songOpts);
 
     albTabBody.appendChild(tabRow);
 };
