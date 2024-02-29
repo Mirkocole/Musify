@@ -1,6 +1,10 @@
 // API DEEZER
 const apiURL = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=';
 
+// All Musics data
+
+const allData = [];
+
 // Default Artists
 const defaultArtist = ['queen','eminem','michael jackson'];
 
@@ -58,17 +62,17 @@ window.onload = ()=>{
 
     // },1000);
 
-    getMusic()
+    // getMusic()
 
 }
 
 
-async function getMusic(){
+async function getMusic(artist = 'queen'){
 
     try {
-        let res = await fetch(apiURL+'queen');
+        let res = await fetch(apiURL+artist);
         let json = await res.json();
-        console.log(json);
+        allData.push(...json.data);
 
     } catch (error) {
         console.log(error)
