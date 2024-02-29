@@ -1,3 +1,13 @@
+// API DEEZER
+const apiURL = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=';
+
+// Default Artists
+const defaultArtist = ['queen','eminem','michael jackson'];
+
+// Data Musics
+let allData = [];
+
+// Live Comments
 const messages = [
     "early stage emely syndrome (sett-ott 2022)",
     "Be The Young",
@@ -23,8 +33,11 @@ const messages = [
 const commentsNav = document.getElementById('commentsNav');
 
 
+
 window.onload = ()=>{
 
+    defaultArtist.forEach(data => getMusic(data));
+    console.log(allData);
     // let rand = Math.floor(Math.random() * messages.length);
     // messages.forEach(data =>{
     //     let mex = document.createElement('p');
@@ -33,19 +46,36 @@ window.onload = ()=>{
     //     commentsNav.appendChild(mex);
     // })
 
-    setInterval(()=>{
-        let rand = Math.floor(Math.random() * messages.length);
-        console.log(messages[rand]);
-        let mex = document.createElement('p');
-        mex.classList = ['text-light py-2'];
-        mex.innerText=messages[rand];
-        if (commentsNav.hasChildNodes) {
-            commentsNav.insertBefore(mex,commentsNav.firstChild)
-        } else {
-            commentsNav.append(mex);
+    // setInterval(()=>{
+    //     let rand = Math.floor(Math.random() * messages.length);
+    //     console.log(messages[rand]);
+    //     let mex = document.createElement('p');
+    //     mex.classList = ['text-light py-2'];
+    //     mex.innerText=messages[rand];
+    //     if (commentsNav.hasChildNodes) {
+    //         commentsNav.insertBefore(mex,commentsNav.firstChild)
+    //     } else {
+    //         commentsNav.append(mex);
             
-        }
+    //     }
 
-    },1000)
+    // },1000);
 
+    // getMusic()
+
+}
+
+
+async function getMusic(artist = 'queen'){
+
+    
+    try {
+        let res = await fetch(apiURL+artist);
+        let json = await res.json();
+        allData.push(...json.data);
+        
+
+    } catch (error) {
+        console.log(error)
+    }
 }
