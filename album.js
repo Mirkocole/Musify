@@ -19,7 +19,10 @@ console.log(numTracks);
 console.log(playTime); */
 
 /* lancio la funzione per caricare il tutto */
-getAlbumData();
+
+    getAlbumData();
+
+
 
 /* fetch per l'acquisizione dei dati */
 async function getAlbumData() {

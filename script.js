@@ -30,31 +30,30 @@ const messages = [
 const commentsNav = document.getElementById('commentsNav');
 
 
-
 window.onload = ()=>{
 
-    // let rand = Math.floor(Math.random() * messages.length);
-    // messages.forEach(data =>{
-    //     let mex = document.createElement('p');
-    //     mex.classList = ['text-light my-2'];
-    //     mex.innerText=data;
-    //     commentsNav.appendChild(mex);
-    // })
+    let rand = Math.floor(Math.random() * messages.length);
+    messages.forEach(data =>{
+         let mex = document.createElement('p');
+         mex.classList = ['text-light my-2'];
+         mex.innerText=data;
+         commentsNav.appendChild(mex);
+     })
 
-    // setInterval(()=>{
-    //     let rand = Math.floor(Math.random() * messages.length);
-    //     console.log(messages[rand]);
-    //     let mex = document.createElement('p');
-    //     mex.classList = ['text-light py-2'];
-    //     mex.innerText=messages[rand];
-    //     if (commentsNav.hasChildNodes) {
-    //         commentsNav.insertBefore(mex,commentsNav.firstChild)
-    //     } else {
-    //         commentsNav.append(mex);
+     setInterval(()=>{
+         let rand = Math.floor(Math.random() * messages.length);
+         console.log(messages[rand]);
+         let mex = document.createElement('p');
+         mex.classList = ['text-light py-2'];
+         mex.innerText=messages[rand];
+         if (commentsNav.hasChildNodes) {
+             commentsNav.insertBefore(mex,commentsNav.firstChild)
+         } else {
+             commentsNav.append(mex);
             
-    //     }
+         }
 
-    // },1000);
+     },1000);
 
     getMusic()
 
