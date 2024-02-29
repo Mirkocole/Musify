@@ -60,15 +60,96 @@ window.onload = ()=>{
 
 }
 
+let track = [];
 
 async function getMusic(){
 
     try {
         let res = await fetch(apiURL+'queen');
         let json = await res.json();
-        console.log(json);
+      //  console.log(json);
+        console.log(json.data);
+
+        let array = json.data;
+        let c = 0;
+        for(bgm of array){
+            track[c] = bgm.preview;
+            c++;
+        }
+
+        console.log(track);
+        
+    //    let audio = new Audio(track[0]);
+    //    audio.play();
+    //    console.log(audio.src);
 
     } catch (error) {
         console.log(error)
     }
+}
+
+let isPlaying = false;
+let audio = new Audio();
+let m = 0;
+let bRandPlay = false;
+let randTrack = 0;
+
+function toggleRand()
+{
+    console.log("toggle");
+    bRandPlay = bRandPlay == true ? false : true;
+}
+
+function modAdd()
+{
+    if(bRandPlay) {
+        randTrack = Math.floor(Math.random() * track.length + 1);
+        m = randTrack;
+        if(isPlaying){
+            playMusic();
+        }
+        console.log(m);
+        return;
+    }
+
+    m++;
+    if(m > track.length)
+        m = 0;
+
+    if(isPlaying){
+        playMusic();
+    }
+        
+
+    console.log(m);
+}
+function modSub()
+{
+    if(bRandPlay){
+        randTrack = Math.floor(Math.random() * track.length +1);
+        m = randTrack;
+        if(isPlaying){
+            playMusic();
+        }
+        console.log(m);
+        return;
+    }
+
+    m--
+    if(m < 0)
+        m = 0;
+    console.log(m);
+    if(isPlaying)
+        playMusic();
+}
+
+function playMusic()
+{
+    if(track.length <= 0)
+        return;
+  
+    audio.src = track[m];
+
+    audio.play();
+    isPlaying = true  
 }

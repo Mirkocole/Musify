@@ -333,7 +333,7 @@
                         <h6 class="mx-5 friend-subtext">New Kings</h6>
                     </span>
                 </div>
-            </div class="text-light"> <!-- friend list-->
+            </div> <!-- friend list-->
 
         </div>
     </div>
@@ -343,7 +343,7 @@
         <span class="text-light">A NATURAL MOCKUP OF A SONG TITLE</span>
         <i class="fas fa-music mx-3" style="color: #74C0FC;"></i>
         <i class="far fa-heart mx-3" style="color: #cd3232;"></i>
-        <button onclick="Play('music.mp3','audio');" class="btn bg-dark mx-3"><span title="Play" id="play"
+        <button onclick="playMusic()" class="btn bg-dark mx-3"><span title="Play" id="play"
                 class="glyphicon glyphicon-play aligned"><i class="far fa-play-circle"
                     style="color: #74C0FC;"></i></span></button>
     </div>
@@ -355,38 +355,38 @@
             </div>
 
             <div class="play-pause-btn text-center">
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark"><span title="Play" id="play"
+                <button onclick="toggleRand(event)" id="modRand" class="btn bg-dark"><span title="Play" id="randTrack"
                         class="glyphicon glyphicon-play aligned"><i class="fas fa-random"
                             style="color: #74C0FC;"></i></span></button>
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark"><span title="Play" id="play"
+                <button onclick="modSub(event)" id="modSub" class="btn bg-dark"><span title="Play" id="leftArr"
                         class="glyphicon glyphicon-play aligned"><i class="fas fa-arrow-left"
                             style="color: #B197FC;"></i></span></button>
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark"><span title="Play" id="play"
+                <button onclick="playMusic()" class="btn bg-dark mx-3"><span title="Play" id="play"
                         class="glyphicon glyphicon-play aligned"><i class="far fa-play-circle"
                             style="color: #74C0FC;"></i></span></button>
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark"><span title="Play" id="play"
+                <button onclick="modAdd(event);" id="modAdd"  class="btn bg-dark"><span title="Play" id="rightArr"
                         class="glyphicon glyphicon-play aligned"><i class="fas fa-arrow-right"
                             style="color: #B197FC;"></i></span></button>
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark"><span title="Play" id="play"
+                <button class="btn bg-dark"><span title="Play"
                         class="glyphicon glyphicon-play aligned"><i class="fas fa-undo-alt"></i></span></button>
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play"
+                <button class="btn bg-dark float-end"><span title="Play"
                         class="glyphicon glyphicon-play aligned"><i
                             class="fa-solid fa-up-right-and-down-left-from-center"
                             style="color: #ffc800;"></i></span></button>
                 <input type="range" min="1" max="100" value="50" class="slider float-end p-2" id="myRange">
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play"
+                <button class="btn bg-dark float-end"><span title="Play"
                         class="glyphicon glyphicon-play aligned"><i class="fas fa-volume-up"
                             style="color: #d53939;"></i></span></button>
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play"
+                <button class="btn bg-dark float-end"><span title="Play"
                         class="glyphicon glyphicon-play aligned"><i class="fas fa-microphone"
                             style="color: #00ff04;"></i></span></button>
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play"
+                <button class="btn bg-dark float-end"><span title="Play"
                         class="glyphicon glyphicon-play aligned"><i class="fas fa-hamburger"
                             style="color: #63E6BE;"></i></span></button>
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play"
+                <button class="btn bg-dark float-end"><span title="Play"
                         class="glyphicon glyphicon-play aligned"><i class="fas fa-hamburger"
                             style="color: #63E6BE;"></i></span></button>
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play"
+                <button class="btn bg-dark float-end"><span title="Play"
                         class="glyphicon glyphicon-play aligned"><i class="fas fa-hamburger"
                             style="color: #63E6BE;"></i></span></button>
 
