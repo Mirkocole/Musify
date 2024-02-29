@@ -330,18 +330,106 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvasDark"
                         aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
-                    <p>Place offcanvas content here.</p>
+                <div class="offcanvas-body  bg-black">
+                    <p>Attività amici <i class="fas fa-times  float-end mx-3" style="color: #ff0088;"></i> <i
+                            class="fas fa-user-friends float-end" style="color: #7e7777;"></i></p>
+                    <span><i class="fas fa-user p-3 friend-text" style="color: #B197FC;"></i>Charlie Hookam <br />
+                        <h6 class="mx-5 friend-subtext">In Camera - Yumi Zooma</h6>
+                    </span>
+
+                    <span><i class="fas fa-user p-3 friend-text" style="color: #878a88;"></i>Lightdark02 <br />
+                        <h6 class="mx-5 friend-subtext">Aimed to Kill</h6>
+                    </span>
+
+                    <span><i class="fas fa-user p-3 friend-text" style="color: #97fcb5;"></i>Charlie Hookam <br />
+                        <h6 class="mx-5 friend-subtext">New Kings</h6>
+                    </span>
                 </div>
-            </div>
+            </div class="text-light"> <!-- friend list-->
 
         </div>
     </div>
+    </div>
+    <!-- Music Player Phone -->
+    <div class="holder sticky-bottom bg-dark d-block d-md-none text-end">
+        <span class="text-light">A NATURAL MOCKUP OF A SONG TITLE</span>
+        <i class="fas fa-music mx-3" style="color: #74C0FC;"></i>
+        <i class="far fa-heart mx-3" style="color: #cd3232;"></i>
+        <button onclick="Play('music.mp3','audio');" class="btn bg-dark mx-3"><span title="Play" id="play"
+                class="glyphicon glyphicon-play aligned"><i class="far fa-play-circle"
+                    style="color: #74C0FC;"></i></span></button>
+    </div>
+    <!-- Music Player PC\Tablet -->
+    <div class="holder sticky-bottom bg-dark d-none d-md-block d-md-block">
+        <div class="audio green-audio-player">
+            <div class="loading">
+                <div class="spinner"></div>
+            </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+            <div class="play-pause-btn text-center">
+                <button onclick="Play('music.mp3','audio');" class="btn bg-dark"><span title="Play" id="play"
+                        class="glyphicon glyphicon-play aligned"><i class="fas fa-random"
+                            style="color: #74C0FC;"></i></span></button>
+                <button onclick="Play('music.mp3','audio');" class="btn bg-dark"><span title="Play" id="play"
+                        class="glyphicon glyphicon-play aligned"><i class="fas fa-arrow-left"
+                            style="color: #B197FC;"></i></span></button>
+                <button onclick="Play('music.mp3','audio');" class="btn bg-dark"><span title="Play" id="play"
+                        class="glyphicon glyphicon-play aligned"><i class="far fa-play-circle"
+                            style="color: #74C0FC;"></i></span></button>
+                <button onclick="Play('music.mp3','audio');" class="btn bg-dark"><span title="Play" id="play"
+                        class="glyphicon glyphicon-play aligned"><i class="fas fa-arrow-right"
+                            style="color: #B197FC;"></i></span></button>
+                <button onclick="Play('music.mp3','audio');" class="btn bg-dark"><span title="Play" id="play"
+                        class="glyphicon glyphicon-play aligned"><i class="fas fa-undo-alt"></i></span></button>
+                <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play"
+                        class="glyphicon glyphicon-play aligned"><i
+                            class="fa-solid fa-up-right-and-down-left-from-center"
+                            style="color: #ffc800;"></i></span></button>
+                <input type="range" min="1" max="100" value="50" class="slider float-end p-2" id="myRange">
+                <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play"
+                        class="glyphicon glyphicon-play aligned"><i class="fas fa-volume-up"
+                            style="color: #d53939;"></i></span></button>
+                <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play"
+                        class="glyphicon glyphicon-play aligned"><i class="fas fa-microphone"
+                            style="color: #00ff04;"></i></span></button>
+                <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play"
+                        class="glyphicon glyphicon-play aligned"><i class="fas fa-hamburger"
+                            style="color: #63E6BE;"></i></span></button>
+                <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play"
+                        class="glyphicon glyphicon-play aligned"><i class="fas fa-hamburger"
+                            style="color: #63E6BE;"></i></span></button>
+                <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play"
+                        class="glyphicon glyphicon-play aligned"><i class="fas fa-hamburger"
+                            style="color: #63E6BE;"></i></span></button>
+
+
+                <img class="float-start"
+                    src="https://www.cucchiaio.it/content/cucchiaio/it/ricette/2016/03/pancake-con-il-bimby/jcr:content/header-par/image-single.img10.jpg/1458645080164.jpg"
+                    height="50px" />
+                <span class="text-light float-start p-2">Pan Kakes <br />Sugar and butter</span>
+                <!--
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
+                      <path fill="#566574" fill-rule="evenodd" d="M18 12L0 24V0" class="play-pause-icon" id="playPause"/>
+                    </svg>
+                    -->
+
+                <div class="controls text-light ">
+                    <span class="current-time">1:00</span>
+                    <div class="slider bg-dark" data-direction="horizontal">
+                        <div class="progress">
+                            <div class="pin" id="progress-pin" data-method="rewind"></div>
+                        </div>
+                    </div>
+                    <span class="total-time"> 0:00 </span>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>
