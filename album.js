@@ -1,5 +1,12 @@
 /* costanti */
-const albumApi = "https://striveschool-api.herokuapp.com/api/deezer/album/75621062";
+/* con id statico */
+ const albumApi = "https://striveschool-api.herokuapp.com/api/deezer/album/75621062";
+
+/* con query */
+// const albumApi = "https://striveschool-api.herokuapp.com/api/deezer/album/";
+// const params = new URLSearchParams(window.location.search);
+// const id = get("q");
+
 
 /* elementi del dom */
 const albTabBody = document.getElementById('album-tab-body');
@@ -27,7 +34,11 @@ console.log(playTime); */
 /* fetch per l'acquisizione dei dati */
 async function getAlbumData() {
     try {
-        const res = await fetch(albumApi);
+        /* con id statico */
+         const res = await fetch(albumApi);
+        /* con query */
+        // const res = await fetch(`${albumApi}${id}`);
+
         const albumData = await res.json();
         console.log(albumData);
         loadAlbumData(albumData);
