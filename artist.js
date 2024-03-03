@@ -33,6 +33,9 @@ function cycleResp(jsonData) {
     const songTime = document.getElementById('songTime');
     songTime.style.listStyle = 'none';
 
+    const imgLikeSmart = document.getElementById('imgLikeSmart');
+    const songListSmart = document.getElementById('songListSmart');
+
     jsonData.forEach(element => {
         createArtistTemplate(element);
     });
@@ -84,4 +87,27 @@ function createArtistTemplate({ artist, title, rank, duration}) {
 
     let pBrani = document.getElementById('pBrani');
     pBrani.innerText ='Di ' + artist.name;
+
+    //smart
+    imgLikeSmart.src = artist.picture;
+
+    let pBraniSmart = document.getElementById('pBraniSmart');
+    pBraniSmart.innerText = '8 brani di ' + artist.name;
+
+    let songListItemSmart = document.createElement('li');
+    songListItemSmart.classList.add('mb-3');
+    
+    let songImgSmart = document.createElement('img');
+    songImgSmart.classList.add('songImg', 'mx-3');
+    songImgSmart.src = artist.picture_small;
+    
+    let songTitleSmart = document.createElement('span');
+    songTitleSmart.classList.add('me-5');
+    songTitleSmart.innerText = title;
+
+    songListItemSmart.appendChild(songImgSmart);
+    songListItemSmart.appendChild(songTitleSmart);
+    
+    songListSmart.appendChild(songListItemSmart);
+
 }
