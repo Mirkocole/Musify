@@ -63,3 +63,20 @@
     background: rgb(31, 31, 31);
     background: linear-gradient(27deg, rgba(31, 31, 31, 1) 0%, rgba(61, 61, 61, 1) 87%);
 }
+
+.bg-white-transparent{
+    background-color: rgba(255, 255, 255, 0.043)!important;
+}
+
+.description-card{
+    font-size: 0.9em;
+}
+
+
+/* @media only screen and (min-width:977px){
+
+
+.card{
+    min-height: 420px;
+}
+} */
