@@ -1,9 +1,3 @@
-// API DEEZER
-const apiURL = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=';
-
-// Default Artists
-const defaultArtist = ['queen','eminem','michael jackson'];
-
 // Live Comments
 const messages = [
     "early stage emely syndrome (sett-ott 2022)",
@@ -30,45 +24,7 @@ const messages = [
 const commentsNav = document.getElementById('commentsNav');
 
 
-
 window.onload = ()=>{
 
-    // let rand = Math.floor(Math.random() * messages.length);
-    // messages.forEach(data =>{
-    //     let mex = document.createElement('p');
-    //     mex.classList = ['text-light my-2'];
-    //     mex.innerText=data;
-    //     commentsNav.appendChild(mex);
-    // })
-
-    // setInterval(()=>{
-    //     let rand = Math.floor(Math.random() * messages.length);
-    //     console.log(messages[rand]);
-    //     let mex = document.createElement('p');
-    //     mex.classList = ['text-light py-2'];
-    //     mex.innerText=messages[rand];
-    //     if (commentsNav.hasChildNodes) {
-    //         commentsNav.insertBefore(mex,commentsNav.firstChild)
-    //     } else {
-    //         commentsNav.append(mex);
-            
-    //     }
-
-    // },1000);
-
-    getMusic()
-
-}
-
-
-async function getMusic(){
-
-    try {
-        let res = await fetch(apiURL+'queen');
-        let json = await res.json();
-        console.log(json);
-
-    } catch (error) {
-        console.log(error)
-    }
+  
 }

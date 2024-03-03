@@ -103,6 +103,7 @@ function createAlbums(data) {
 
 }
 
+
 function createArtists(data) {
     /*
         <div class="col-12">
