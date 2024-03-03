@@ -1,9 +1,3 @@
-// API DEEZER
-const apiURL = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=';
-
-// Default Artists
-const defaultArtist = ['queen','eminem','michael jackson'];
-
 // Live Comments
 const messages = [
     "early stage emely syndrome (sett-ott 2022)",
@@ -28,6 +22,7 @@ const messages = [
 ]
 
 const commentsNav = document.getElementById('commentsNav');
+
 
 let time = 0;
 let audio = new Audio();
