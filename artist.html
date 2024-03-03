@@ -46,7 +46,7 @@
                     <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-column w-100">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Cerca</a>
@@ -94,7 +94,7 @@
                 <ul class="d-flex justify-content-evenly container m-0">
                     <li class="nav-item">
                         <a class="nav-link text-light active d-flex flex-column align-items-center" aria-current="page"
-                            href="#">
+                            href="index.html">
                             <i class="fa-solid fa-house mb-2"></i>
                             <span style="font-size: 10px;">Home</span>
                         </a>
@@ -124,81 +124,115 @@
         <div class="bg-dark overflow-scroll col">
 
             <div class="col">
-                <div class="row pt-5" id="artistBox">
-                  <div class="pt-5">
-                    <i class="fas fa-check-circle text-info"></i> <span class="text-white ms-1 artVer">Artista verificato</span>
-                  </div>
-                  <h1 class="display-3  fw-bold text-white" id="artistName"></h1>
-                  <div class="text-white mt-2">
-                    <p class="ascoltMens">3.433.158 ascoltatori mensili</p>
-                  </div>
+                <!-- Frecce e Menu Profilo -->
+                <div class="container d-none d-lg-flex justify-content-between align-items-center my-3 px-5 py-2">
+                    <div class="col-auto">
+                        <i
+                            class="btn fa-solid fa-arrow-left p-2 text-light bg-secondary rounded-circle me-3 bg-black"></i>
+                        <i class="btn fa-solid fa-arrow-right p-2 text-light bg-secondary rounded-circle bg-black"></i>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button"
+                            class="btn btn-secondary d-flex align-items-center dropdown-toggle w-100 pe-2 ps-0 py-0 bg-black border border-none border-circle"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=30&h=50&dpr=2"
+                                    alt="" class="rounded-circle">
+                                <span class="p-2">Lidia Nautilus ...</span>
+                            </div>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasDark" aria-controls="offcanvasDark">
+                                    Action
+                                </button></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="row bgArt">
-                  <div class="col col-8">
-                    <div class="d-flex">
-                      <div class="my-3 mx-1">
-                        <button type="button" class="btn btn-success rounded-circle">
-                          <i class="fas fa-play text-black"></i>
-                        </button>
-                      </div>
-                      <div class="following">
-                        <button type="button" class="btn btn-outline-light btn-sm">
-                          <span class="text-white px-2 fs-bold">FOLLOWING</span>
-                        </button>
-                      </div>
-                      <div class="following my-3 dropdown">
-                        <button class="btn btn-sm text-white dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                          . . .
-                        </button>
-                        <ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item text-white" href="#">Action</a></li>
-                          <li><a class="dropdown-item text-white" href="#">Another action</a></li>
-                          <li><a class="dropdown-item text-white" href="#">Something else here</a></li>
-                          /ul>
-                      </div>
+                <div class="row p-3" id="artistBox">
+                    <div class="pt-5">
+                        <i class="fas fa-check-circle text-info"></i> <span class="text-white ms-1 artVer">Artista
+                            verificato</span>
                     </div>
-                    <!--NAVBAR PLAY SMARTPHONE-->
-                    <div class="d-flex d-lg-none">
-                      <div class="following">
-                        <button type="button" class="btn btn-outline-light btn-sm">
-                          <span class="text-white px-2 fs-bold">Seguiti</span>
-                        </button>
-                      </div>
+                    <h1 class="display-3  fw-bold text-white" id="artistName"></h1>
+                    <div class="text-white mt-2">
+                        <p class="ascoltMens">3.433.158 ascoltatori mensili</p>
                     </div>
-                    <!--SONG TABLE-->
-                    <div class="mt-1">
-                      <h6 class="text-white fs-bold">Popolari</h6>
-                      <div class="row">
-                        <div class="col-8 text-white pe-0" id="songBox">
-                          <ol id="songList" class="song-list mt-4"></ol>
-                        </div>
-                        <div class="col-2 text-white-50 song-list songPlay">
-                          <ul id="songPlay"></ul>
-                        </div>
-                        <div class="col-2 text-white-50 song-list songPlay">
-                          <ul id="songTime"></ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="col col-4 mt-4">
-                    <h6 class="text-white fs-bold mt-5">Brani che ti piacciono</h6>
-                    <div class="d-flex">
-                      <div class="position-relative">
-                        <img src="" alt="img artista" id="imgLike" class="rounded-circle">
-                        <span class="position-absolute translate-middle bg-success rounded-circle heart text-white">
-                          <i class="fas fa-heart "></i>
-                        </span>
-                      </div>
-                      <div class="ms-3">
-                        <p class="text-white fs-bold pBrani">Hai messo Mi piace a 11 brani</p>
-                        <p class="text-white-50" id="pBrani"></p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
+                <div class="row bgArt p-5">
+                    <div class="col col-8">
+                        <div class="d-flex">
+                            <div class="my-3 mx-1">
+                                <button type="button" class="btn btn-success rounded-circle">
+                                    <i class="fas fa-play text-black"></i>
+                                </button>
+                            </div>
+                            <div class="following">
+                                <button type="button" class="btn btn-outline-light btn-sm">
+                                    <span class="text-white px-2 fs-bold">FOLLOWING</span>
+                                </button>
+                            </div>
+                            <div class="following my-3 dropdown">
+                                <button class="btn btn-sm text-white dropdown-toggle" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    . . .
+                                </button>
+                                <ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item text-white" href="#">Action</a></li>
+                                    <li><a class="dropdown-item text-white" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item text-white" href="#">Something else here</a></li>
+                                    /ul>
+                            </div>
+                        </div>
+                        <!--NAVBAR PLAY SMARTPHONE-->
+                        <div class="d-flex d-lg-none">
+                            <div class="following">
+                                <button type="button" class="btn btn-outline-light btn-sm">
+                                    <span class="text-white px-2 fs-bold">Seguiti</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!--SONG TABLE-->
+                        <div class="mt-1">
+                            <h6 class="text-white fs-bold">Popolari</h6>
+                            <div class="row">
+                                <div class="col-8 text-white pe-0" id="songBox">
+                                    <ol id="songList" class="song-list mt-4"></ol>
+                                </div>
+                                <div class="col-2 text-white-50 song-list songPlay">
+                                    <ul id="songPlay"></ul>
+                                </div>
+                                <div class="col-2 text-white-50 song-list songPlay">
+                                    <ul id="songTime"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-4 mt-4">
+                        <h6 class="text-white fs-bold mt-5">Brani che ti piacciono</h6>
+                        <div class="d-flex">
+                            <div class="position-relative">
+                                <img src="" alt="img artista" id="imgLike" class="rounded-circle">
+                                <span
+                                    class="position-absolute translate-middle bg-success rounded-circle heart text-white">
+                                    <i class="fas fa-heart "></i>
+                                </span>
+                            </div>
+                            <div class="ms-3">
+                                <p class="text-white fs-bold pBrani">Hai messo Mi piace a 11 brani</p>
+                                <p class="text-white-50" id="pBrani"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDark"
                 aria-labelledby="offcanvasDarkLabel">
@@ -236,54 +270,54 @@
                 class="glyphicon glyphicon-play aligned"><i class="far fa-play-circle"
                     style="color: #74C0FC;"></i></span></button>
     </div>
-    <!-- Music Player PC\Tablet -->
-    <div class="holder sticky-bottom bg-dark d-none d-md-block d-md-block">
+     <!-- Music Player PC\Tablet -->
+     <div class="holder sticky-bottom bg-dark d-none d-md-block d-md-block playbar-pos">
         <div class="audio green-audio-player">
             <div class="loading">
                 <div class="spinner"></div>
             </div>
 
             <div class="play-pause-btn text-center">
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark"><span title="Play" id="play"
-                        class="glyphicon glyphicon-play aligned"><i class="fas fa-random"
+                <button onclick="toggleRand(event)" id="modRand" class="btn bg-dark"><span title="Play" id="randTrack"
+                        class="glyphicon glyphicon-play aligned"><i id="rand-icon" class="fas fa-random"
                             style="color: #74C0FC;"></i></span></button>
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark"><span title="Play" id="play"
+                <button onclick="modSub(event)" id="modSub" class="btn bg-dark"><span title="Play" id="leftArr"
                         class="glyphicon glyphicon-play aligned"><i class="fas fa-arrow-left"
                             style="color: #B197FC;"></i></span></button>
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark"><span title="Play" id="play"
-                        class="glyphicon glyphicon-play aligned"><i class="far fa-play-circle"
+                <button onclick="playMusic(); morphPlayIcon()" class="btn bg-dark mx-3"><span title="Play" id="play"
+                        class="glyphicon glyphicon-play aligned"><i id="play-icon" class="far fa-play-circle"
                             style="color: #74C0FC;"></i></span></button>
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark"><span title="Play" id="play"
+                <button onclick="modAdd(event)" id="modAdd"  class="btn bg-dark"><span title="Play" id="rightArr"
                         class="glyphicon glyphicon-play aligned"><i class="fas fa-arrow-right"
                             style="color: #B197FC;"></i></span></button>
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark"><span title="Play" id="play"
+                <button class="btn bg-dark"><span title="Play"
                         class="glyphicon glyphicon-play aligned"><i class="fas fa-undo-alt"></i></span></button>
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play"
+                <button class="btn bg-dark float-end"><span title="Play"
                         class="glyphicon glyphicon-play aligned"><i
                             class="fa-solid fa-up-right-and-down-left-from-center"
                             style="color: #ffc800;"></i></span></button>
-                <input type="range" min="1" max="100" value="50" class="slider float-end p-2" id="myRange">
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play"
-                        class="glyphicon glyphicon-play aligned"><i class="fas fa-volume-up"
-                            style="color: #d53939;"></i></span></button>
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play"
-                        class="glyphicon glyphicon-play aligned"><i class="fas fa-microphone"
+                <input  onclick="modVol(event)" type="range" min="1" max="100" value="10" class="slider float-end p-2" id="myRange"/>
+                <button onclick="toggleMute(event)" class="btn bg-dark float-end"><span title="Play"
+                        class="glyphicon glyphicon-play aligned"><i id="volume-icon" class="fas fa-volume-up"
+                            style="color: #d53939;"></i></span></button>    
+                <button onclick="morphMicIcon(event)" class="btn bg-dark float-end"><span title="Play"
+                        class="glyphicon glyphicon-play aligned"><i id="mic-icon" class="fas fa-microphone"
                             style="color: #00ff04;"></i></span></button>
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play"
+                <button class="btn bg-dark float-end"><span title="Play"
                         class="glyphicon glyphicon-play aligned"><i class="fas fa-hamburger"
                             style="color: #63E6BE;"></i></span></button>
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play"
+                <button class="btn bg-dark float-end"><span title="Play"
                         class="glyphicon glyphicon-play aligned"><i class="fas fa-hamburger"
                             style="color: #63E6BE;"></i></span></button>
-                <button onclick="Play('music.mp3','audio');" class="btn bg-dark float-end"><span title="Play" id="play"
+                <button class="btn bg-dark float-end"><span title="Play"
                         class="glyphicon glyphicon-play aligned"><i class="fas fa-hamburger"
                             style="color: #63E6BE;"></i></span></button>
 
 
-                <img class="float-start"
+                <img id="artist-img" class="float-start"
                     src="https://www.cucchiaio.it/content/cucchiaio/it/ricette/2016/03/pancake-con-il-bimby/jcr:content/header-par/image-single.img10.jpg/1458645080164.jpg"
                     height="50px" />
-                <span class="text-light float-start p-2">Pan Kakes <br />Sugar and butter</span>
+                <span id="song-title" class="text-light float-start p-2">Pan Kakes <br />Sugar and butter</span>
                 <!--
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24">
                       <path fill="#566574" fill-rule="evenodd" d="M18 12L0 24V0" class="play-pause-icon" id="playPause"/>
@@ -291,16 +325,17 @@
                     -->
 
                 <div class="controls text-light ">
-                    <span class="current-time">1:00</span>
+                    <span id ="current-time" class="current-time">1:00</span>
                     <div class="slider bg-dark" data-direction="horizontal">
                         <div class="progress">
                             <div class="pin" id="progress-pin" data-method="rewind"></div>
                         </div>
                     </div>
-                    <span class="total-time"> 0:00 </span>
+                    <span id ="total-time"  class="total-time"> 0:00 </span>
                 </div>
             </div>
         </div>
+    </div>
 
 
 
@@ -312,7 +347,7 @@
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <script src="artist.js"></script>
-        <script src="script.js"></script>
+        <!-- <script src="script.js"></script> -->
 </body>
 
 </html>

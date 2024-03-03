@@ -104,7 +104,7 @@ window.onload = () => {
                 min++;
             }
             tracker.innerHTML = min.toFixed(0) + " : " + sec.toFixed(0);
-            console.log(playTime);
+            //console.log(playTime);
         }
 
     },1000);
@@ -125,7 +125,7 @@ async function getMusic(artist = 'queen') {
     try {
         let res = await fetch(apiURL + artist);
         let json = await res.json();
-        console.log(json.data[0])
+        //console.log(json.data[0])
         allData.push(json.data[0]);
         albums.innerHTML = '';
         artists.innerHTML = '';
@@ -144,7 +144,7 @@ async function getMusic(artist = 'queen') {
         let c = 0;
         for(bgm of array){
 
-            console.log(bgm);
+            //console.log(bgm);
             track[c] = bgm.preview;
 
             img[c] = bgm.album.cover_small;
@@ -158,7 +158,7 @@ async function getMusic(artist = 'queen') {
         }
 
     } catch (error) {
-        console.log(error)
+        //console.log(error)
     }
 }
 
@@ -187,7 +187,7 @@ function createAlbums(data) {
     // Actions
     col.addEventListener('click', () => {
         alert(`Hai cliccato sull'album ${data.album.title}`);
-        window.location.href = `album.html?id=${data.album.id}`;
+        window.location.href = `album.html?id=${data.album.id}&artist=${data.artist.name}`;
     })
 
     // Unione elementi
@@ -241,7 +241,7 @@ function createArtists(data) {
     description.classList = ['card-text text-grey description-card'];
 
     // Inserisco i dati
-    console.log(data.artist.picture);
+    //console.log(data.artist.picture);
     img.src = data.artist.picture_big;;
     cardTitle.innerText = data.artist.name;
     description.innerHTML = data.album.title;
@@ -249,7 +249,7 @@ function createArtists(data) {
     // Actions
     col.addEventListener('click', () => {
         alert(`Hai cliccato sull'album ${data.artist.name}`);
-        window.location.href = `artist.html?id=${data.artist.id}`;
+        window.location.href = `artist.html?id=${data.artist.name}`;
     })
 
     // Collego i Nodi
@@ -345,7 +345,7 @@ function toggleRand()
 {
     bRandPlay = bRandPlay == true ? false : true;
     let randButton = document.getElementById("rand-icon");
-    console.log(randButton.style.color);
+    //console.log(randButton.style.color);
     if(randButton){
         randButton.style.color = bRandPlay === true ? "rgb(255, 255, 255)" : "rgb(116, 192, 252)";
     }
@@ -355,7 +355,7 @@ function toggleRand()
 function setTotalTime()
 {
     let trackLength = document.getElementById("total-time");
-    console.log(duration[m]);
+    //console.log(duration[m]);
     trackLength.innerHTML = duration[m];
 }
 
@@ -462,7 +462,7 @@ function setImg()
     }
 
     let songName = document.getElementById("song-title");
-    console.log(songName);
+    //console.log(songName);
     if(songName) {
         songName.innerHTML = title[m] +  title[m][m];
     }

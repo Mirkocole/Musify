@@ -59,64 +59,9 @@ window.onload = ()=>{
 
      },3000);
 
-     // music currentTime tracker
-     setInterval(()=> {
-
-        if(isPlaying){
-            time = audio.currentTime;
-            let tracker = document.getElementById("current-time");
-    
-            let playTime = audio.currentTime.toFixed(0);
-            let min = 0;
-           
-           
-            sec++;
-            if(sec == 60) {
-                sec = 0;
-                min++;
-            }
-            tracker.innerHTML = min.toFixed(0) + " : " + sec.toFixed(0);
-            console.log(playTime);
-        }
-
-    },1000);
-
-    getMusic();
-
 }
 
-let track = [];
-let img = [];
-let title = []; // bidimensional array that stores songs and album titles
-let duration = [];
 
-async function getMusic(){
-
-    try {
-        let res = await fetch(apiURL+'queen');
-        let json = await res.json();
-  
-        let array = json.data;
-        let c = 0;
-        for(bgm of array){
-
-            console.log(bgm);
-            track[c] = bgm.preview;
-
-            img[c] = bgm.album.cover_small;
-            title[c] = bgm.title + "\n";
-            title[c][c] = bgm.album.title;
-
-            // calc duration
-
-            duration[c] = bgm.duration;
-            c++;
-        }
-        
-    } catch (error) {
-        console.log(error)
-    }
-}
 
 let isPlaying = false;
 
