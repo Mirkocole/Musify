@@ -24,7 +24,6 @@ const messages = [
 const commentsNav = document.getElementById('commentsNav');
 
 
-
 window.onload = ()=>{
 
   

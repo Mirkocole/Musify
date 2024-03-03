@@ -1,0 +1,25 @@
+.album-title {
+    font-size: 80pt;
+}
+
+.bck-gradient {
+    background: linear-gradient(0deg, rgba(0,0,0,0) 10%, rgba(255,236,141,1) 100%);
+    height: 15rem;
+}
+
+.play-icon-wrapper {
+    background-color: #1ed760;
+}
+
+.clr-darkgrey {
+    color: darkgray !important;
+}  
+
+.clr-whitesmoke {
+    color: whitesmoke !important;
+}
+
+img.placeholderavatar {
+    height: 20px;
+    width: 20px;
+}
