@@ -80,13 +80,12 @@
 } */
 
 
-
-.over-bar{
+.playbar-pos {
     bottom: 0px;
 }
 
-@media screen and (max-width:991px) {
-    .over-bar{
+@media only screen and (max-width: 991px) {
+    .playbar-pos {
         bottom: 75px;
     }
 }
