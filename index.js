@@ -106,17 +106,10 @@ async function getMusic(artist = 'queen') {
         albums.innerHTML = '';
         artists.innerHTML = '';
         for (let i = 0; i < 6; i++) {
-            //    let max = allData.length;
-            //    let random = Math.floor(Math.random()* max);
-
             createAlbums(allData[i]);
-
-            // createArtists(allData[random]);
         }
 
         for (const artist of allData) {
-            //     let max = allData.length;
-            //    let random = Math.floor(Math.random()* max);
             createArtists(artist);
         }
 
