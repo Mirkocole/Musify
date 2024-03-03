@@ -1,21 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="album.css">
     <script src="https://kit.fontawesome.com/b68de36aab.js" crossorigin="anonymous"></script>
     <title>Album</title>
 </head>
-<body>
-    
 
+<body>
+    <main>
+        <!-- la colonna -->
+        <div class="bck-gradient">
+            <!-- jumbotron contenente informazioni sul'album -->
+                <div class="container-fluid p-3">
+                    <div class="row">
+                        <div class="col-12 col-sm-3 d-flex justify-content-center align-content-center">
+                            <img id="main-cover-img" class="img-fluid shadow-lg m-3" src="https://m.media-amazon.com/images/I/51pZ2ah+f8L._UXNaN_FMjpg_QL85_.jpg" alt="album prova">
+                        </div>
+                        <div class="col-12 col-sm-9 d-flex flex-column justify-content-end">
+                            <div class="clr-whitesmoke">
+                                <h6 class="d-none d-sm-inline-block">Album</h6>
+                                <h1 id="main-album-title" class="fs-1 fw-bold">Gioventù Brucata</h1>
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle m-2 placeholderavatar" src="#" alt="nome artista">
+                                    <h6 class="mb-0">
+                                        <span id="main-artist-name">Pinguini Tattici Nucleari</span>
+                                        <span class="d-none d-sm-inline-block">
+                                            <span> • </span>
+                                            <span class="album-year">2017</span>
+                                            <span> • </span>
+                                            <span class="tracks-number">12</span>
+                                            <span> brani, </span>
+                                            <span class="clr-darkgrey play-time">57 min 20 sec.</span>
+                                        </span>
+                                    </h6>
+    
+                                </div>
+                                <div class="d-flex align-items-center d-sm-inline-block d-sm-none">
+                                    <p class="mb-0 clr-darkgrey">
+                                        <span>Album • </span>
+                                        <span class="album-year">2017</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+
+            <!-- barra delle azioni -->
+            <div class="d-flex align-items-center flex-row-reverse flex-sm-row justify-content-between justify-content-sm-start mx-3">
+
+                <!-- contenitore delle opzioni di play -->
+                <div class="d-flex align-items-center">
+                    <div>
+                        <ion-icon class="fs-1 clr-darkgrey p-1 d-sm-none" name="shuffle-outline"></ion-icon>
+                    </div>
+                    <div
+                        class="rounded-circle play-icon-wrapper d-flex align-content-center justify-content-center p-3">
+                        <ion-icon class="fs-4" name="play"></ion-icon>
+                    </div>
+                </div>
+
+                <!-- contenitore delle altre opzioni -->
+                <div>
+                    <div class="d-flex align-items-center clr-darkgrey mx-3">
+                        <ion-icon class="fs-2 p-1" name="heart-outline"></ion-icon>
+                        <ion-icon class="fs-2 p-1" name="arrow-down-circle-outline"></ion-icon>
+                        <ion-icon class="fs-2 p-1" name="ellipsis-horizontal-outline"></ion-icon>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- tabella delle tracce -->
+            <div class="mx-3">
+                <table class="table table-dark table-borderless">
+                    <thead>
+                      <tr>
+                        <th class="bg-transparent clr-darkgrey d-none d-sm-table-cell" scope="col">#</th>
+                        <th class="bg-transparent clr-darkgrey d-none d-sm-table-cell" scope="col">Titolo</th>
+                        <th class="bg-transparent clr-darkgrey d-none d-sm-table-cell" scope="col">Riproduzioni</th>
+                        <th class="bg-transparent clr-darkgrey d-none d-sm-table-cell" scope="col"><ion-icon name="time-outline"></ion-icon></th>
+                        <th class="bg-transparent clr-darkgrey d-none" scope="col"></ion-icon></th>
+                      </tr>
+                    </thead>
+                    <tbody id="album-tab-body">
+                      <tr>
+                        <th class="bg-transparent clr-darkgrey align-middle" scope="row">1</th>
+                        <td class="bg-transparent align-middle">
+                            <h5 class="mb-0">Montanelli - Intro</h5>
+                            <p class="clr-darkgrey mb-0">Pinguini tattici nucleari</p>
+                        </td>
+                        <td class="bg-transparent clr-darkgrey align-middle">694000</td>
+                        <td class="bg-transparent clr-darkgrey align-middle">1:28</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+
+        </div>
+
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="album.js"></script>
 </body>
+
 </html>

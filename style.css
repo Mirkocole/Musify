@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+#sideNav {
+    overflow-y: hidden;
+}
+
+#commentsNav {
+    overflow-y: scroll;
+    max-height: 430px;
+}
+
+.no-arrow-dropdown.dropdown-toggle::after {
+    content: none !important;
+}
+
+.w-300 {
+    max-width: 300px !important;
+}
+
+.w-60 {
+    width: 60px !important;
+}
+
+.border-circle {
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.border-circle>img {
+    object-fit: fill;
+}
+
+.text-grey {
+    color: rgb(155, 157, 158) !important;
+}
+
+.bg-grey {
+    background-color: rgb(184, 184, 184) !important;
+}
+
+.gradient-black {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(27deg, rgba(0, 0, 0, 1) 0%, rgba(47, 47, 47, 1) 81%);
+}
+
+.bg-gradient-black {
+    background: rgb(18, 18, 18);
+    background: linear-gradient(27deg, rgba(18, 18, 18, 1) 0%, rgba(33, 33, 33, 1) 81%);
+}
