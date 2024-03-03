@@ -1,4 +1,4 @@
-/* costanti */
+
 /* con id statico */
  const albumApi = "https://striveschool-api.herokuapp.com/api/deezer/album/75621062";
 
@@ -27,7 +27,7 @@ console.log(playTime); */
 
 /* lancio la funzione per caricare il tutto */
 
-    getAlbumData();
+getAlbumData();
 
 
 
