@@ -91,7 +91,7 @@ function createAlbums(data){
                 // Actions
                 col.addEventListener('click',()=>{
                     alert(`Hai cliccato sull'album ${data.album.title}`);
-                    window.location.href = `albums.html?id=${data.id}`;
+                    window.location.href = `album.html?id=${data.album.id}`;
                 })
 
                 // Unione elementi
